@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* --------------------------------------------------
+Container
+-------------------------------------------------- */
+html, body {height: 100%;}
+body{ margin:0; padding:0; background-color:black}
+#div#container, div.container {display: table;height: 100%;width: 100%;}
+#wrapper {display: table;height:100%;width: 100%;}
+#center{display: table-cell;vertical-align: middle;}
+#regular{ margin-top:80px; margin-bottom:50px;}
+
+/* --------------------------------------------------
+HTML5 elements - Tell the browser to render HTML 5 elements as block
+-------------------------------------------------- */
+header, footer, aside, nav, article { display: block; }
+
+/* --------------------------------------------------
+Grid
+-------------------------------------------------- */
+.column-row			{margin: 0 0 18px 0;}
+.row				{float:left;}
+.column, .columns 	{float:left; display: inline; margin: 0 0 0 10px;}
+.first_col 			{margin-left:0px !important; }
+.one 	{width: 132px }
+.two 	{width: 294px }
+.two_b 	{width: 279px }
+.three 	{width: 446px }
+.four 	{width: 598px }
+.five 	{width: 750px }
+.six 	{width: 902px }
+.seven 	{width: 1054px}
+.eight 	{width: 1206px}
+.offset-by-one 		{margin-left: 167px; }
+.offset-by-two 		{margin-left: 314px; }
+.offset-by-three	{margin-left: 466px; }
+.offset-by-four 	{margin-left: 618px; }
+.offset-by-five 	{margin-left: 770px; }
+.offset-by-six 		{margin-left: 922px; }
+.offset-by-seven 	{margin-left: 1074px; }
+ 
+/* Clear the columns automagically */
+.column-row:after, .row:after, .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; background-color:#999}
+* html .column-row, * html .row, * html .clearfix { height: 1%; }
+.column-row, .row, .clearfix { display: inline-block; }
+.column-row, .row, .clearfix { display: block; }
+ 
+/* IE6 Problems ---------- */
+body.ie .column-row { width: 972px; }
+body.ie .two-thirds .column-row { width: 1306px; }
+
+/* --------------------------------------------------
+Spacing
+-------------------------------------------------- */
+.padding_full{padding:20px !important}
+.padding_full_small{padding:20px 10px!important}
+.padding_TB{padding:20px 0}
+.padding_LR{padding:0 20px}
+.padding_L{padding:0 0 0 20px}
+
+/* --------------------------------------------------
+Header
+-------------------------------------------------- */
+#logo {height:58px; width:143px; margin:0 23px 0 0; padding:0; float:left}
+nav { width:90%;position:absolute; top:0; z-index: 10001; }
+nav ul {height:58px; margin-left:20px;}
+nav ul li { float:left; margin: 17px 15px 0 0; padding: 7px 0;}
+nav ul a:hover{ border-top:1px red solid; border-bottom:1px red solid; padding:7px 0}
+nav ul a.current{ border-top:1px white solid; border-bottom:1px white solid; padding:7px 0}
+nav .logo { background-image:url(../assets/logo.png); height:58px; width:143px; margin:0 30px 0 0; padding:0;}
+nav a{ text-transform:uppercase; color:white; text-decoration:none; font-family:BebasRegular; font-size:17px}
+.sub_nav{margin-top:8px}
+.sub_nav hr{border: 0;color: #414141;background-color: #414141;height: 1px;}
+.section{ color:#414141}
+.selected{color:#7e7e7e}
+
+/* --------------------------------------------------
+Lists
+-------------------------------------------------- */
+#footerSlideContainer ul li{padding-bottom:7px; font-weight:bold;}
+#footerSlideContainer ul ul li{/* padding-left:15px;*/ color:#999; font-weight:normal}
+#sign_up{ width:195px; float:right; padding-top:10px;}
+
+/* --------------------------------------------------
+Clearing/Hide/Float
+-------------------------------------------------- */
+.hide {display:none}
+.left {float:left}
+.right {float:right}
+.clear{ clear:both}
+br{ clear:both}
+
+/* --------------------------------------------------
+Dividers
+-------------------------------------------------- */
+.six hr {border: 0; background-image:url(../assets/images/divider.png);height: 23px;}
+
+/* --------------------------------------------------
+Background colours
+-------------------------------------------------- */
+.trans {background-color: rgba(0, 0, 0, 0.7);}
+.trans_dark {background-color: rgba(0, 0, 0, 0.85);}
+.border {border-right:1px solid #DC0000}
+
+/* --------------------------------------------------
+Footer
+-------------------------------------------------- */
+#footerSlideContainer {bottom:0; position:fixed; width:100%; z-index:10002;}
+#footerSlideButton 	{background-color:#DC0000; height:39px; width:143px; margin:0 30px 0 20px; cursor:pointer;}
+#footerSlideContent {background-color:black; height:260px; display:none}
+#footerSlideButton img{float:right}
+
+
+/* --------------------------------------------------
+Rounded corners
+-------------------------------------------------- */
+.top_rounded{border-radius:6px 6px 0px 0px; -moz-border-radius: 6px 6px 0px 0px; -khtml-border-radius: 6px 6px 0px 0px; -webkit-border-radius: 6px 6px 0px 0px;}
+.top_left_rounded{border-radius:6px 0px 0px 0px;-moz-border-radius: 6px 0px 0px 0px;-khtml-border-radius: 6px 0px 0px 0px; -webkit-border-radius: 6px 0px 0px 0px;}
+.right_rounded{border-radius:0px 6px 6px 0px; -moz-border-radius: 0px 6px 6px 0px; -khtml-border-radius: 0px 6px 6px 0px; -webkit-border-radius: 0px 6px 6px 0px}
+.bottom_rounded{border-radius:0px 0px 6px 6px; -moz-border-radius: 0px 0px 6px 6px; -khtml-border-radius: 0px 0px 6px 6px; -webkit-border-radius: 0px 0px 6px 6px}
+.bottom_left_rounded{border-radius:0px 0px 0px 6px;-moz-border-radius:0px 0px 0px 6px;-khtml-border-radius:0px 0px 0px 6px; -webkit-border-radius:0px 0px 0px 6px;}
+.left_rounded{border-radius:6px 0px 0px 6px; -moz-border-radius:6px 0px 0px 6px; -khtml-border-radius:6px 0px 0px 6px; -webkit-border-radius: 6px 0px 0px 6px}
+
+/* --------------------------------------------------
+Forms
+-------------------------------------------------- */
+label{width: 90px; font-weight:bold; float:left; margin:0 10px 10px 0;text-align: left;}
+input{ background-color:#4e4e4e; border:none; padding:2px; color:white; float:right; width:190px}
+input[type=text]:hover { background-color:#333}
+
+#bdi { float:right; position:relative; margin-top:230px}
+.sub_nav a { text-decoration:none; color:white}
+.sub_nav a:hover { color:red}
+  
+
+
+#case_nav{padding:20px 0px 10px 0px; width:100%}
+#case_intro{padding:10px 0px 20px 0px;}
+p a {color:white; text-decoration:none}
+p a:hover{color:#f00000}

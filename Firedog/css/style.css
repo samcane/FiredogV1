@@ -1,0 +1,310 @@
+/* Start: Recommended Isotope styles */
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+.isotope-hidden {height:0 !important; margin:0 !important}
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+          transition-property: height, width;
+	overflow:visible !important;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/* End: Recommended Isotope styles */
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+          transition: none;
+}
+
+
+/**** Isotope styles ****/
+
+/* required for containers to inherit vertical size from window */
+html,body {height: 100%;}
+
+.element {
+  /*width: 315px;
+  height: 190px;*/
+  margin: 4px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+.project { position:absolute; bottom:0; width:100%;z-index: 50;left: 0;}
+.project_detail {cursor:pointer; background:url(../images/pro_info_a.png) top right; padding:10px; }
+.project_detail.active {background:url(../images/pro_info_a.png)  right -80px}
+.project_detail a{ text-decoration:none;}
+.project_detail h2.info {padding-right:25px;}
+.intro {color: white; font-size: 11px;padding:10px 10px 0 10px;}
+.categories { color: grey; font-size: 11px; font-weight: bold; padding:10px; line-height:15px;}
+.categories a{ color: grey; font-weight: normal;}
+.categories span{ color: white; font-weight: bold;}
+.hidden{ display:none}
+.further_detail{display:none; background:url(../images/90_percent.png) !important ; background-repeat:repeat;}
+
+.element ul li {
+	position:relative;
+	margin-bottom:5px;
+}
+
+.element.large,
+.variable-sizes .element.large,
+.variable-sizes .element.large.width2.height2 {
+  font-size: 3.0em;
+  width: 315px;
+  height: 391px;
+  z-index: 100;
+}
+
+.clickable {
+  margin:0px !important;
+}
+
+.clickable .element:hover {
+  cursor: pointer;
+}
+
+.clickable .element:hover h3 {
+  text-shadow:
+    0 0 10px white,
+    0 0 10px white
+  ;
+}
+
+.clickable .element:hover h2 {
+  color: white;
+}
+
+.element.level_4 {
+    background-image: url("../images/archive_bg.png");
+    height: 33px;
+    width: 295px;
+}
+
+.element.level_3 { 
+	width: 295px;
+	height: 190px; 
+}
+.element.level_2 { 
+	width: 295px;
+	height: 388px; /*real size with margin:5px is 390px;*/ 
+}
+.element2.level_2 { 
+	width: 295px;
+	height: 388px; /*real size with margin:5px is 390px;*/
+}
+
+.element.level_1 { 
+	width: 598px; /*real size with margin:5px is 600px*/
+	height: 388px; /*390px;*/
+}
+
+.element .image_href {display:inline-block;background:url(../images/image-ajax-loader.gif) center 50% no-repeat}
+
+
+
+/* Credentials  ------------------------------------------- */
+
+.page-id-73 #regular {
+	padding-top: 15px;
+	width: 1002px;
+}
+
+.credentials {
+		float: left;
+		margin: 0 20px 20px 0;
+	}
+	
+	.small_test {
+		background-image: url("../images/cred_test_small.png");
+		height: 161px;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 25px;
+		width: 254px;
+	}
+	
+	.large_test {
+		background-image: url("../images/cred_test_large.png");
+		height: 161px;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 25px;
+		width: 406px;
+	}
+	
+		.small_test img, .large_test img{
+			bottom: 20px;
+			float: right;
+			position: absolute;
+			right: 15px;
+		}
+	
+	.small_test p, .large_test p {
+		font-size: 11px !important;
+		line-height: 1.32em !important;
+	}
+	
+
+/* Firedog People ------------------------------------------- */
+.person {width:179px; height:212px;display:block;margin-right: 0px;}
+.person p {position:relative;width:179px; height:212px;display:block;z-index:50;padding:0;background:#000;overflow:hidden;}
+.person_col { display:none;}
+
+.talent {
+    float: left;
+    margin: 0 20px 20px 0;
+    overflow: hidden;
+    position: relative;
+    width: 426px;
+}
+
+.talent.large {
+  z-index: 100;
+}
+
+.talent .person img {position:absolute;top:0;left:0;z-index:50}
+.full {
+	display:none;
+	font-size: 12px;
+    line-height: 1.4em;
+    padding-bottom: 17px;
+}
+
+.talent .intro{
+	padding:0;
+	color:white;
+	}
+
+	
+.clickable .talent:hover {
+  cursor: pointer;
+}
+
+.people_links_holder {
+    margin-top: -120px;
+    height:126px;
+    overflow: hidden;
+	position:relative;
+	z-index:20;
+	background-image: url("../images/people_caption_alt.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+	padding: 0 0 15px;
+	}
+.people_links_holder .people_caption_img {
+	height:13px;
+	width:100%;
+	margin-top: 15px;
+}
+.bio {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 20px;
+	padding-right:10px;
+    width: 227px !important;
+	background:#000
+	}
+
+.people_links {background-image: url("../images/red_arrow_right.png");background-position: left 2px;background-repeat: no-repeat;display: inline-block;font-family: GlyphaBold;font-size: 13px;padding: 0 20px 0 20px; margin-bottom:6px; margin-left:20px;line-height:15px;}
+/***.people_links.alt {background-image: url("../images/red_arrow_right.png");background-position: left 2px;background-repeat: no-repeat; display:block; font-family: GlyphaBold;font-size: 13px;padding: 0 20px 0 20px; margin-top:-11px; margin-left:20px;}**/
+
+.bio h5 {padding:0}
+.trigger {background-image: url("../images/red_arrow_right.png"); background-position: left 7px;background-repeat: no-repeat;display: block;font-family: GlyphaBold;font-size: 13px;margin-top: -5px;padding: 3px 20px;}
+
+
+
+/* >> The Magnificent CLEARFIX: Updated to prevent margin-collapsing on child elements << j.mp/bestclearfix */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden; }
+.clearfix:after { clear: both; }
+/* fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix { zoom: 1; }
+
+
+
+/*Filter*/
+#regular {clear:both;width:100%;}
+.isotope {margin:0 15px;}
+
+.black_filter {background:black url(../images/filter_bg_1.png) top center no-repeat; width: 275px;height: 371px;/*real size with margin:5px is 373px*/
+float:left;padding:7px 10px 10px;overflow: visible;z-index:50;visibility: hidden;}
+.black_filter h3{color:red;font-weight:bold;line-height:27px;padding:0 0 8px; margin-top:-4px}
+.black_filter #total_case_studies{font-size:11px;font-weight:bold;color:#A2A2A2}
+.black_filter p{padding:4px 0;font-size:13px}
+.black_filter .orange{color:orange;font-weight:bold;font-size:11px;padding:0 0 8px;display: inline-block;}
+	.black_filter .orange.bg{display:block;margin:12px 0 5px -10px;padding:10px;width:275px;}
+.black_filter .filter_button {display:inline-block;}
+
+.black_filter .filter_button.type_all::-moz-focus-inner,
+.black_filter .filter_button.type_communications::-moz-focus-inner,
+.black_filter .filter_button.type_brand::-moz-focus-inner,
+.black_filter .filter_button.type_digital::-moz-focus-inner { 
+    border: 0;
+    padding: 0;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	/* Google Chrome and Safari */
+    .black_filter .filter_button.type_all,
+	.black_filter .filter_button.type_communications,
+	.black_filter .filter_button.type_brand,
+	.black_filter .filter_button.type_digital { 
+		margin:0;
+		padding:0;
+		border:0
+	}
+}
+.black_filter .filter_button.type_all,
+.black_filter .filter_button.type_communications {margin-left:66px;}
+.black_filter .filter_button.type_brand,
+.black_filter .filter_button.type_digital {margin-left:5px;}
+/*Safari*/
+.black_filter .filter_button.type_all,
+.black_filter .filter_button.type_communications {margin-left:62px;}
+.safari .black_filter .filter_button.type_brand,
+.safari .black_filter .filter_button.type_digital {margin-left:0px;}
+
+.black_filter .filter_button.active span span {/*color:red;*/}
+.black_filter select {margin-top:7px;padding:3px;width:150px;}
+
+/* Case study single page */
+#info_window_block {z-index:50;}
+
+.six .left { width:152px; margin-right: 27px; }
+.six a h5 { width:152px }
+
+#galleria img{display:none;}

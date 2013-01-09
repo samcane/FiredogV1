@@ -1,0 +1,362 @@
+
+/* LAYOUT */
+/* ----------------------------------------- */
+
+body { min-width:1245px; background-color:#000; position:relative; /*for the ribbon*/}
+#login h1 a { background:url(../images/fd_logo.png) !important;}
+#wrapper { padding-bottom: 50px;}
+.aligncenter { display:block; margin:0 auto }
+.alignleft { float:left }
+.alignright { float:right }
+.wp-caption { text-align:center;}
+br.clear { clear:both; display:block; height:1px; margin:-1px 0 0 0 } /* Use this br class to clear your floated columns */
+li#theme-switcher { background:#fff; border:10px solid red; padding:20px; position:fixed; top:0; right:0 } /* Use this if you have the Theme Switcher Reloaded plugin (http://themebot.com/webmaster-tools/1-wordpress-theme-switcher-reloaded) installed and want to make it nice and obvious */
+
+/*Homepage*/
+#wrapper_homepage {display: inline-block;height: 100%;width: 100%;}
+#wrapper_homepage #left{display: inline-block; position:fixed;z-index:500}
+#wrapper_homepage h1.module_head{clear: both;border-bottom: 1px solid #DC0000;font-size: 36px; margin-bottom: 10px;}
+#wrapper_homepage h4.module_head {color: #F00000;font-size: 14px}
+#wrapper_homepage h6.module_intro {padding-bottom: 0;}
+#wrapper_homepage h5.module_head {font-size: 24px;}
+#wrapper_homepage p {padding:0}
+#wrapper_homepage p img {float: left;padding: 0 8px 0 0;}
+#wrapper_homepage h6 img {float: left;padding: 0 8px 0 0;}
+#wrapper_homepage p.small {font-size: 11px;padding-bottom: 10px;}
+#wrapper_homepage .border {border-right: 1px solid #DC0000;}
+#wrapper_homepage #case_nav {padding: 20px 0 10px;width: 100%;}
+#wrapper_homepage p.case_desc {padding: 10px 0;}
+#wrapper_homepage p.case_desc_last {padding: 0 0 20px;}
+#wrapper_homepage a:hover {color:#F00000}
+
+/* Grid setup ---------------------------------------- */
+.column-row			{margin: 0 0 80px 0;}
+.column-row-alt		{margin: 0 0 30px 0;}
+.column-row-sec		{margin: 0 0 18px;clear: both;display: inline-block;float: left;}
+.row				{float:left; margin-right:10px; padding-right:10px}
+.row_a				{float:left; margin-right:0px; padding-right:10px}
+.last-row			{margin-right:0px !important; }
+.column, .columns 	{float:left; display: inline; margin: 0 0 0 10px;}
+.first_col 			{margin-left:0px !important; }
+/* Grid widths --------------------------------------- */
+.first				{width: 142px }
+.one 				{width: 132px }
+.one-and-half		{width: 248px }
+.two 				{width: 284px }
+.single_archive .two {width: 280px } 
+.two_b 				{width: 279px;margin:0}
+.three 				{width: 446px }
+.four 				{width: 598px }
+.five 				{width: 730px }
+.six 				{width: 902px }
+.old_blog			{width: 620px }
+.old_blog_home		{width: 420px }
+.seven 				{width: 1054px}
+.eight 				{width: 1206px}
+.offset-by-one 		{margin-left: 162px; }
+.offset-by-two 		{margin-left: 314px; }
+.offset-by-three	{margin-left: 466px; }
+.offset-by-four 	{margin-left: 618px; }
+.offset-by-five 	{margin-left: 770px; }
+.offset-by-six 		{margin-left: 922px; }
+.offset-by-seven 	{margin-left: 1074px; }
+
+.six hr 				{background-image: url(../images/divider.png); border: 0 none; height: 23px; margin:15px 0 5px 0;}
+#thinking-space .six hr {background-image: url(../images/divider_alt.png); border: 0 none; height: 23px; margin:15px 0 5px 0;}
+.two hr 				{background-color: #414141; border: 0 none; color: #414141;height: 1px; margin: 0 0 8px;}
+
+/* Clear the columns automagically */
+.column-row:after, .row:after, .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; background-color:#999}
+* html .column-row, * html .row, * html .clearfix { height: 1%; }
+.column-row, .row, .clearfix { display: inline-block; }
+.column-row, .row, .clearfix { display: block; }
+
+/* IE6 Problems -------------------------------------- */
+body.ie .column-row { width: 972px; }
+body.ie .two-thirds .column-row { width: 1306px; }
+
+/* Header -------------------------------------------- */
+#header {width:100%; height:85px;position:relative;z-index:100} /*change to height to 85px if using the breadcrumbs*/ 
+.menu-header {z-index:10001; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);}
+.menu-header ul {height:58px;}
+.menu-header ul li {float:left; margin: 12px 15px 0 0; padding: 7px 0;}
+.menu-header ul li a.menu-item-home {color:blue}
+.menu-header ul li a.current {border-top:1px white solid; border-bottom:1px white solid; padding:7px 0;}
+.menu-headeraaaaaaaaaaaaaaa ul li a:hover { background-image:url(../images/rollover.png); background-position:bottom center; background-repeat:no-repeat; padding-bottom:15px}
+.menu-header ul li .menu_rollover {display: none;height: 14px;position: relative;width: 100%;}
+.menu-header ul li .menu_rollover .menu_left{float:left;background: url("../images/rollover_01.png") top left; width:4px; height:14px; left:2px; position:absolute;top: 0;}
+.menu-header ul li .menu_rollover .menu_right{float:right;background: url("../images/rollover_03.png") top right;width:4px;height:14px;right: 2px;position: absolute;top: 0;}
+.menu-header ul li .menu_rollover .menu_middle{background: url("../images/rollover_02.png") top center;height:14px;margin:0 6px}
+#logo {height:58px; width: 143px; float:left}
+.sub_nav hr	{border: 0;color: #414141;background-color: #414141;height: 1px; margin-bottom: 15px;}
+.sub_nav {padding: 5px 0 0; width: 142px; margin-bottom:10px;}
+.sub_nav .page_item {padding:0 0 12px 9px}
+.sub_nav .page_item a {color: #7E7E7E}
+.sub_nav .current_page_item a	{color:#ccc}
+.sub_nav .current-page-ancestor a{color:#7e7e7e}
+.archive_tag{ float:left;font-size: 12px;}
+.archive_tag li { float:left}
+.port_tag{font-size: 12px; margin: 5px 0 12px 0;}
+.pdf_top { background-image: url(../images/PDF_upper.png); background-position:top; background-repeat:no-repeat; margin-top: 35px;}
+.pdf_bottom { background-image:url(../images/PDF_downer_darker.png); width:128px; height:22px}
+table {width:100%}
+
+/* Content parts ------------------------------------- */
+.header 	 {padding-bottom:23px}
+.sub-header	 {padding-bottom:40px}
+.pullout	 {background-image:url(../images/pullout_top.png); background-color:#000; background-repeat:no-repeat; min-height:135px; width:293px; background-color:black; margin-top:18px}
+.pull_bottom {background-image:url(../images/pullout_bottom.png); height:16px; width:293px}
+.buttons	 {float:right; position: fixed; bottom:59px; right:0;background:black; width:15px; height:55px; padding:15px;z-index:200;cursor:pointer}
+.caption_area {float:left; position: absolute; bottom:15px; left: 15px;}
+.gallery img {border:none !important}
+.gallery-item {margin-top:0px !important; margin-bottom:10px }
+
+/* Footer -------------------------------------------- */
+#footerSlideContainer 	{bottom:0; left:0;position:fixed; width:100%; min-width: 1245px; z-index:10000;}
+#footerSlideButton 		{background-color:#333333; height:39px; margin-left:19px; cursor:pointer;}
+#footerSlideContent 	{display:none;background-color:black; height: 350px; background-image:url(../images/reflection.png); background-repeat:no-repeat; background-position: 20px 0;}
+	#footerSlideContent a	{ text-decoration:none;}
+#footerSlideButton img	{float:right; padding: 12px 15px 0 0;}
+.footer_space			{padding-top:30px}
+.socialmedia-buttons 	{margin-top: 8px !important;margin-bottom: 15px;}
+
+/* MailChimp ----------------------------------------- */
+#mc_signup {width:284px;}
+#mc_signup .mc_merge_var {clear:both;margin-bottom:10px;display: inline-block;}
+#mc_signup .mc_var_label {float:left;width: 100px;line-height:24px;}
+#mc_signup_form input {background-color:#4E4E4E; border:none;}
+#mc_signup_form input.mc_input {
+    color: white;
+    float: left;
+    font-size: 11px;
+    padding: 4px;
+    width: 175px;}
+#mc_signup {margin-top:8px; color:#fff}
+#mc_signup_submit {background:url(../images/signup_button.jpg) top left no-repeat; display:block;float:right;width:80px;height:21px;overflow:hidden;text-indent:-500px;cursor:pointer;}
+#mc_unsub_link {display:none;}
+.mc_success_msg, .mc_error_msg {color: #FF9900 !important;}
+#mc_message {margin-top: -9px;padding-bottom: 9px;}
+
+/* Rounded corners ----------------------------------- */
+.top_rounded		{border-radius:6px 6px 0 0;-moz-border-radius:6px 6px 0 0;-khtml-border-radius:6px 6px 0 0;-webkit-border-radius:6px 6px 0 0;behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc")}
+.right_rounded		{border-radius:0 6px 6px 0;-moz-border-radius:0 6px 6px 0;-khtml-border-radius:0 6px 6px 0;-webkit-border-radius:0 6px 6px 0;behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc")}
+a .bottom_rounded	{border-radius:0 0 6px 6px;-moz-border-radius:0 0 6px 6px;-khtml-border-radius:0 0 6px 6px;-webkit-border-radius:0 0 6px 6px;behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc")}
+.bottom_rounded		{border-radius:0 0 6px 6px;-moz-border-radius:0 0 6px 6px;-khtml-border-radius:0 0 6px 6px;-webkit-border-radius:0 0 6px 6px;behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc")}
+.left_rounded		{border-radius:6px 0 0 6px;-moz-border-radius:6px 0 0 6px;-khtml-border-radius:6px 0 0 6px;-webkit-border-radius:6px 0 0 6px;behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc")}
+.top_left_rounded	{border-radius:6px 0 0 0;  -moz-border-radius:6px 0 0 0;  -khtml-border-radius:6px 0 0 0;  -webkit-border-radius:6px 0 0 0  ;behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc")}
+.top_right_rounded	{border-radius:0 6px 0 0;  -moz-border-radius:0 6px 0 0;  -khtml-border-radius:0 6px 0 0;  -webkit-border-radius:0 6px 0 0  ;behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc")}
+.bot_right_rounded  {border-radius:0 0 6px 0;  -moz-border-radius:0 0 6px 0;  -khtml-border-radius:0 0 6px 0;  -webkit-border-radius:0 0 6px 0  ;behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc")}
+.bot_left_rounded   {border-radius:0 0 0 6px;  -moz-border-radius:0 0 0 6px;  -khtml-border-radius:0 0 0 6px;  -webkit-border-radius:0 0 0 6px  ;behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc")}
+.rounded			{border-radius:3px;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc")}
+
+/* Spacing ------------------------------------------- */
+.padding_full{padding:20px !important}
+.padding_full_small{padding:20px 10px!important}
+.padding_TB{padding:20px 0}
+.padding_LR{padding:0 20px}
+.padding_TRBL{padding:10px 20px}
+.padding_L{padding:0 0 0 20px}
+.padding_R{padding:0 20px 0 0}
+.padding_TR{padding:20px 20px 0 0}
+.hide {display:none}
+.left {float:left}
+.right {float:right}
+.single-casestudies .right {float:right; bottom:59px !important}
+.clear{ clear:both}
+br{ clear:both}
+
+/* Project Managment Page ------------------------------------------- */
+#stages {background-image: url("../images/management_cloud.png"); height:460px; width:847px; position:relative; background-repeat:no-repeat;}
+.tabs li.listen,
+.tabs li.think,
+.tabs li.design,
+.tabs li.produce,
+.tabs li.measure {background-image: url("../images/90_percent.png"); background:none repeat scroll 0 0 rgba(255, 255, 255, 0.1); border: solid 2px #333; position:absolute}
+#tab_container {min-height:500px;}
+#tab_container h2 {background-image:url("../images/pro_man_divide.png"); width:905px; height:40px; background-position:center bottom; background-repeat:no-repeat;margin-bottom: 22px;}
+#tab_container h3 {padding-bottom: 3px !important;}
+.tabs li.active{background-image: url("../images/mesh.png")}
+.tabs li.listen  {-moz-border-radius:80px;  -khtml-border-radius:80px;  -webkit-border-radius:80px;  border-radius:80px;  behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc"); height:160px; width:160px; margin: 201px 0 0 40px;}
+.tabs li.think 	 {-moz-border-radius:95px;  -khtml-border-radius:95px;  -webkit-border-radius:95px;  border-radius:95px;  behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc"); height:190px; width:190px; margin: 80px 0 0 130px;}
+.tabs li.design  {-moz-border-radius:130px; -khtml-border-radius:130px; -webkit-border-radius:130px; border-radius:130px; behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc");height:260px; width:260px; margin: 120px 0 0 264px;}
+.tabs li.produce {-moz-border-radius:115px; -khtml-border-radius:115px; -webkit-border-radius:115px; border-radius:115px; behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc");height:230px; width:230px; margin: 54px 0 0 464px;}
+.tabs li.measure {-moz-border-radius:90px;  -khtml-border-radius:90px;  -webkit-border-radius:90px;  border-radius:90px;  behavior: url("http://www.firedog.co.uk/wp-content/themes/Firedog/js/PIE.htc"); height:180px; width:180px; margin: 175px 0 0 629px;}
+	.tabs li.listen a{background-image: url("../images/listen.png"); display:block; height:30px; margin: 65px auto; text-indent:-9000px; width:85px; background-repeat:no-repeat; background-position: center top; }
+	.tabs li.listen a:hover {background-position: 0px -31px;}
+	.tabs li.listen.active a {background-position: 0px -62px;}
+	.tabs li.think a{background-image: url("../images/think.png"); display:block; height:35px; margin:77px auto; text-indent: -9000px; width:89px; background-repeat:no-repeat; background-position: center top; }
+	.tabs li.think a:hover {background-position: 0px -35px;}
+	.tabs li.think.active a {background-position: 0px -71px;}
+	.tabs li.design a{background-image: url("../images/design.png"); display:block; height:42px; margin:109px auto; text-indent:-9000px; width:121px; background-repeat:no-repeat; background-position: center top; }
+	.tabs li.design a:hover {background-position: 0px -42px;}
+	.tabs li.design.active a {background-position: 0px -85px;}
+	.tabs li.produce a{background-image: url("../images/produce.png"); display:block; height:42px; margin:94px auto; text-indent:-9000px; width:155px; background-repeat:no-repeat; background-position: center top; }
+	.tabs li.produce a:hover {background-position: 0px -43px;}
+	.tabs li.produce.active a {background-position: 0px -85px;}
+	.tabs li.measure a{background-image: url("../images/measure.png"); display:block; height:31px; margin:74px auto; text-indent:-9000px; width:119px; background-repeat:no-repeat; background-position: center top; }
+	.tabs li.measure a:hover {background-position: 0px -31px;}
+	.tabs li.measure.active a {background-position: 0px -62px;}
+
+/* Transparaent Images-------------------------------- */
+.trans 		{background:url(../images/80_percent.png); }
+.trans_dark {background:url(../images/85_percent.png); }
+
+/* Galleria Thumbs -------------------------------- */
+.white_thumb {background-color: white; height: 20px; margin: 8px 0 0 20px; width: 20px;}
+.red_thumb {background-color: #f00000; height: 20px; margin: 8px 0 0 20px; width: 20px;}
+
+img.similar_projects {margin-right:10px;}
+.archive_large { padding-bottom:12px;}
+
+/*Blog template*/
+#blog_content {float:left;}
+#blog_right_side {float:right;width:200px;}
+
+/* Blog -------------------------------- */
+#thinking-space {background-color: #FFFFFF; color: #444444;}
+#thinking-space a { color:#444}
+.post_item .aligncenter { display:block; margin:0 auto; padding: 0 5px 10px 5px; }
+.post_item .alignleft 	{ float:left; 	padding: 0 10px 10px 0;}
+.post_item .alignright 	{ float:right; 	padding: 0 0 10px 10px;}
+#thinking-space h5.footer  { color:#FFF !important}
+#thinking-space #menu-primary-navigation li a:hover { color:#444 !important}
+#thinking-space .contact li a:hover { color:#444 !important}
+#thinking-space #footerSlideContent ul li a {color:#fff !important}
+#thinking-space #footerSlideContent ul li .sub-menu li a{color:#999 !important} 
+#thinking-space .sub_nav .current-cat a{color: #ff0000;}
+#thinking-space .sub_nav .current-cat .children li a{color: #444444;}
+#thinking-space .sub_nav .current-cat .children li a:hover{color: #FF0000;}
+#thinking-space a:hover { color:#FF0000}
+#thinking-space .small_caption_left, #thinking-space .small_caption_right {    
+	border-bottom: 1px solid black;
+    border-top: 5px solid black;
+    font-family: GlyphaBold;
+    font-size: 17px;
+    line-height: 1.2em;
+    padding: 7px 5px 12px;
+    width: 200px;}
+#thinking-space .small_caption_left {float: left; margin: 4px 10px 10px 0;}
+#thinking-space .small_caption_right {float: right; margin: 4px 0 10px 10px;}
+#thinking-space .large_caption_left, #thinking-space .large_caption_right  {
+	border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    float: left;
+    font-family: GlyphaBlack;
+    font-size: 22px;
+    line-height: 1.2em;
+    margin: 4px 10px 10px 0;
+    padding: 7px 5px 12px;
+    text-transform: uppercase;
+    width: 365px;}
+#thinking-space .large_caption_left {float: left;margin: 4px 10px 10px 0;}
+#thinking-space .large_caption_right {float: right; margin: 4px 0 10px 10px;}
+#thinking-space .quoteme {color: #333; font-family: Georgia, Times, Serif; font-size: 14px; font-style: bold italic;}
+#thinking-space .section a	{margin:0 0 7px 3px; color:#414141 !important}
+#thinking-space .section a:hover	{color:#ff0000 !important}
+#thinking-space .post_item h1  {border-bottom: 1px solid #333333;font-family: GlyphaBlack; font-size: 22px; line-height: 1.2em ;padding: 5px 0;}
+#thinking-space h4 {font-family: GlyphaBlack; font-size: 18px; line-height: 1.2em}
+#thinking-space h1 a {color:#000; text-decoration:none}
+#thinking-space .sub_nav a { text-decoration:none; color: #444444;}
+#thinking-space .sub_nav a:hover { text-decoration:none; color: #FF0000;}
+#thinking-space .sub_nav .children {margin-left: -11px; margin-top: 5px;}
+#thinking-space .sub_nav.authors-list li {font-family:"Helvetica Neue", Arial, Helvetica, sans-serif; font-size: 11px;padding: 2px 8px;text-transform: none;}
+#thinking-space .sub_nav.authors-list li a, {font-family:"Helvetica Neue", Arial, Helvetica, sans-serif; font-size: 11px;padding: 2px 8px;text-transform: none; margin-left: -11px; !important;}
+#thinking-space .menu-header {text-shadowdsd: none; z-index: 10001;}
+.testshadow {text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);}
+#thinking-space .testshadow {text-shadow: none;}
+#thinking-space .old_blog {float:left;margin-left:0}
+.fineprint, .fineprint a {color: #999999 !important;font-size: 11px;}
+.fineprint a:hover {color:#FF0000 !important}
+.bottom_blog_nav { padding-top:30px; font-size:12px; color:#FF0000}
+.post_item {border-top: 5px solid #CCCCCC; padding:0 0 50px 0;}
+.right-blog-mod { border-top: 5px solid #CCCCCC; margin-bottom: 10px; padding-top: 10px; padding-right: 0px !important}
+	.right-blog-mod hr{ background-color: #414141; border: 0 none; color: #cccccc; height: 1px; margin: 5px 0 15px 0;}
+	.right-blog-mod p{ font-size:11px; padding-bottom:10px; }
+	.author-name{ font-weight: bold; padding-bottom: 0px !important;}
+.right-blog-mod span a{ font-size: 11px; color: #999 !important;; padding-left:4px;}
+.furniture { padding: 0 0 10px 25px !important; text-transform: capitalize; }
+.icon_date {background:url(../images/icon_date.png) no-repeat scroll 0 0 transparent; float:left; font-size:10px; height: 16px; padding: 3px 9px 0 0; text-align: center; width: 16px; #999 !important}
+.icon-cat {background:url(../images/icon_cats.png) no-repeat scroll 0 4px transparent}
+.icon-tag {background:url(../images/icon_tags.png) no-repeat scroll 0 4px transparent}
+.icon-comments {background:url(../images/icon_comments.png) no-repeat scroll 0 4px transparent}
+.furniture li { list-style: none outside none !important;; font-size: 11px !important;; color: #444444 !important;}
+.furniture a{ color: #444444 !important; text-decoration: underline;}
+.furniture a:hover{ color: #ff0000 !important}
+#thinking-space cite {color:#444444; }
+.old_blog ul, .old_blog ol { padding:0 0 17px 20px; font-size: 12px; line-height: 1.4em;}
+.old_blog ol li {list-style: decimal; padding-bottom: 10px;}
+.old_blog ul li { list-style:circle; font-size: 12px; line-height: 1.4em;}
+.old_blog_home .alignleft { padding-right:10px; padding-bottom:10px}
+.old_blog_home .alignright { padding-left:10px; padding-bottom:10px}
+.old_blog h3{font-family:GlyphaBold; font-size:15px; color:#444444; line-height:1.25em; padding-bottom:12px}/* Need to replace with Glypha roman */
+.single-post .sub_nav .cat-item-122 .children li { font-size:20px;}
+
+/* Comments -------------------------------- */
+.comment-body p {font-size: 11px;}
+.commentmetadata {padding-bottom: 20px;}
+.commentmetadata a {font-size: 11px; }
+#comments-title {padding-top: 30px;}
+.comment-author {color: #ff0000;font-family: GlyphaBold;font-size: 18px; line-height: 1.25em;}
+.comment-author img {display: none;}
+.reply {color:#ff0000; font-size: 14px; font-weight: bold; padding-bottom: 45px;}
+#commentform label {}
+textarea #comment {width:100% !important}
+.form-allowed-tags {}
+p.comment-form-author input, p.comment-form-email input, p.comment-form-url input {margin-left: 10px;}
+
+/* Illustration -------------------------------- */
+
+#thinking-space-top, #thinking-space-bottom {
+    background-repeat: no-repeat; min-width: 1245px; position: absolute; width: 100%; z-index: -10;}
+#thinking-space-top {
+	background-image: url("../images/illustration/thinking-space.jpg");
+    background-position: 1075px 75px;
+    height: 1366px;}
+#thinking-space-bottom {background-image: url("../images/illustration/thinking-space_bottom.jpg");
+    background-position: 950px top;
+    height: 350px;
+    margin-top: -350px;}
+#illustration_digital, #illustration_strat, #illustration_brand, #illustration_media,
+#illustration_motion, #illustration_print, #illustration_campaign,#illustration_method,
+#illustration_nutshell, #illustration_approach, #illustration_pro_management, #illustration_capabilities{
+    background-repeat: no-repeat; height: 1000px; min-width: 1245px; position: absolute; width: 100%; z-index: -10;}
+#illustration_digital {
+	background-image: url("../images/illustration/illustration_digitalbranding.jpg");
+    background-position: 1130px 135px;}
+#illustration_strat {
+	background-image: url("../images/illustration/Strategy-and-planning.jpg");
+    background-position: 610px 160px;}
+#illustration_brand {
+	background-image: url("../images/illustration/Brand-creation.jpg");
+    background-position: 1125px 170px;}
+#illustration_media {
+	background-image: url("../images/illustration/Digital-media.jpg");
+    background-position: 1145px 135px;}
+#illustration_motion{
+	height:800px;
+	background-image: url("../images/illustration/Motion-Animation.jpg");
+    background-position: 1125px 135px;}
+#illustration_print{
+	background-image: url("../images/illustration/Design-for-print.jpg");
+    background-position: 790px 0px;}
+#illustration_campaign{
+	background-image: url("../images/illustration/Campaigns.jpg");
+    background-position: 1125px 165px;}
+#illustration_method{
+	height: 750px;
+	background-image: url("../images/illustration/An-altogether-better-experience.jpg");
+    background-position: 1135px 100px;}
+#illustration_nutshell{
+	height: 690px;
+	background-image: url("../images/illustration/In-a-nut-shell.jpg");
+    background-position: 1105px 185px;}
+#illustration_approach{
+	height: 780px;
+	background-image: url("../images/illustration/Our-approach.jpg");
+    background-position: 860px 0;}
+#illustration_pro_management{
+	background-image: url("../images/illustration/Project-management.jpg");
+    background-position: 1115px 165px;}
+#illustration_capabilities{
+	background-image: url("../images/illustration/Pure-Conceptual.jpg");
+    background-position: 1124px 155px}

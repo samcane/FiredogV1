@@ -1,0 +1,107 @@
+
+/* TYPOGRAPHY */
+/* ----------------------------------------- */
+
+body {font-family:"Helvetica Neue", Arial, Helvetica, sans-serif; color:white} /* Sets the basic type of typography of the site */
+p {font-size: 12px; line-height: 1.4em; padding-bottom:17px}
+a {color:white; text-decoration:underline; outline:none; -moz-transition: all 0.15s linear 0s;}
+.tabs a {color:white; text-decoration:underline; outline:none; -moz-transition: all 0s linear 0s;}
+p a, .port_tag a, .archive_tag a, #cs_tags a{color:white; text-decoration:underline}
+p a:hover, .port_tag a:hover, .archive_tag a:hover, #cs_tags a:hover {color:#F00000}
+	p.caption {font-size:11px; line-height:1.3em; padding-bottom:0px}
+	.dropcap {border: medium none; display: block;float:left; height: 16px; margin: -2px 0 0; padding: 0 4px; text-indent: -9000px; width: 13px;}
+	.quote {background:transparent url("../images/quote.png")0 0 no-repeat;}
+	.quote_from {font-family:GlyphaBlack; color:#FF9900; width: 201px;margin-top: -3px;}
+	.contactdetails {font-family:GlyphaMedium; font-size:15px; line-height:1.25em; color:#fff; font-weight: normal; margin-top: 5px;}
+	.contactdetails span {font-family:GlyphaBlack}
+	.wp-caption-text { font-size:10px; font-weight:bold; color:#999;}
+#info_window_block ul {padding-bottom:17px; margin-top: -10px;}
+	#info_window_block ul li {font-size: 12px; list-style-position: outside; list-style-image:url("../images/bullet.png"); margin-left:15px;}
+	#info_window_block .port_tag {padding-bottom:0px; margin-top:0}
+	#info_window_block vul.port_tag li {list-style-type:none; list-style-image:none;margin-left:0px;}
+
+
+/* Breadcrumbs ---------------------------- */
+	#breadcrumbs {border-bottom: 1px solid #333; color: #555; display: inline-block; padding-bottom: 8px; margin: 5px 0 20px; line-height:15px;}
+	#breadcrumbs strong{color: #555;}
+	#breadcrumbs a{color: #555; font-weight: bold;}
+	#breadcrumbs a:hover{color: #F00000;}
+	.section {font-family:"Helvetica Neue", Arial, Helvetica, sans-serif !important; border-bottom: 1px solid #333; color: #555; font-size: 12px !important;
+    margin-bottom: 26px; padding: 0 8px 8px !important; text-transform: none !important;}
+	
+	/*#breadcrumbs {display:none;}
+	.section {border-bottom: 1px solid #414141;color: #414141; margin: 0 0 15px 3px; padding: 0 5px 15px !important;}*/
+	
+/* Header typography ----------------------- */
+.menu-header ul li a { font-family: AlternateGothic2BTRegular; font-size:22px; text-decoration: none; text-transform:uppercase}
+.home ul.contact {margin-right:120px; /*For the ribbon*/ }
+.contact {font-family:GlyphaBold; font-size: 12px;}
+
+
+
+	.contact a { text-decoration:none}
+	.contact li { text-align:right}
+
+/* Sub navigation ---------------------------- */
+.sub_nav li { font-family: AlternateGothic2BTRegular; font-size: 15px; padding: 5px 8px; text-transform:uppercase}
+	.sub_nav li a:hover {color:red}
+#thinking-space .sub_nav li {font-family:AlternateGothic2BTRegular; font-size:15px; padding:0 0 12px 9px; text-transform:uppercase}
+#thinking-space .sub_nav .children li {font-family:"Helvetica Neue", Arial, Helvetica, sans-serif; font-size: 11px; padding:2px 11px; text-transform: none;}
+/*#thinking-space .authors-list li.section {font-family:AlternateGothic2BTRegular !important; font-size:15px !important; text-transform:uppercase !important}*/#thinking-space .authors-list li.section {font-family:"Helvetica Neue", Arial, Helvetica, sans-serif !important; font-size:12px !important; text-transform:none !important}
+
+/* Header ---------------------------- */
+h1{font-family:GlyphaBlack; font-size:30px; line-height:1.2em; color:#F00000; padding-bottom:15px; }
+	h1.port_header {color: #FFFFFF; font-family: AlternateGothic2BTRegular; font-size: 20px; margin: 5px 0 15px; text-transform:uppercase;}	
+h2{font-family:GlyphaMedium; font-size:24px; line-height:1.2em; padding-bottom:8px;}/* Need to replace with Glypha roman */
+	h2.info {color: white; display: inline; font-family: AlternateGothic2BTRegular; font-size: 16px; padding-left: 0; text-transform:uppercase;}
+	h2 .pipe {color: #F00000; font-size: 13px; position: relative; top: -2px;}
+h3{font-family:GlyphaMedium; font-size:15px; color:#FF9900; line-height:1.25em; padding-bottom:12px}/* Need to replace with Glypha roman */
+	h3.archive {color:#f00000; margin:10px 20px 0 28px; float:left;}
+	.page-id-173 h3 {color:#FFF}
+h4{font-family:GlyphaBold; font-size:15px; line-height:1.2em; padding:0 0 10px;}
+	h4.caption{padding:0}
+	.talent h4 {color: #F00000; font-family: AlternateGothic2BTRegular; font-size: 30px; padding-bottom: 0; text-transform:uppercase;}
+h5 {font-family: AlternateGothic2BTRegular; font-size: 32px; text-transform:uppercase;}
+	.talent h5 {font-size:21px;}
+	h5.footer{font-size:20px; padding:9px 10px 0 15px;}
+	.galleria-info-title {font-family: AlternateGothic2BTRegular !important; font-size: 31px !important; line-height: 12px;}	
+h6{text-transform: none; font-family: "Helvetica Neue", Arial, sans-serif; font-size:12px; font-weight:bold; padding-bottom: 20px;}
+	h6.widget-title {color:#F00000;text-transform: uppercase; padding: 10px 0 5px;}
+	h6.archive {padding-left:10px; padding-top:9px;}
+	h6 .pipe {color: #F00000; font-size: 13px; padding: 0 1px;}
+	h6.back_to_top {color:#999999;padding-top: 13px;}
+	h6.back_to_top a {color:#999999; text-decoration:none}
+	h6.back_to_top img{padding-left: 5px;vertical-align: bottom;}
+	h6.port_header_mini {text-transform:capitalize;text-decoration:none;font-size:11px;line-height:14px;margin:5px 0 -2px; padding-bottom:0px; display: inline-block;}
+	h6.port_header_mini a { text-decoration: none;}
+	.level_4 .view { text-decoration:none}
+	.page-template-page-with-similar-projects-php .left a{text-decoration: none;}
+
+/* Case study full typography ----------------------- */
+.pull_num {font-family: GlyphaThin; font-size: 68px; padding:11px; }
+.pullout h4 {font-size: 24px;padding-top: 21px;}
+.pull_content {float: right;padding-right: 15px;}
+.port_item {font-weight: bold;text-transform: uppercase;}
+.pdf_top p {font-size:11px; text-align:center; margin-top:25px; padding:18px 14px 11px 14px}
+table{ padding:0 11px}
+
+/* Archive typography ----------------------- */
+.single_archive p img{margin-bottom:15px !important; padding-bottom:0px !important;}
+
+/* Footer typography ----------------------- */
+#footerSlideContent ul li{ font-size:11px; font-weight: bold;}
+#footerSlideContent ul.sub-menu li a{color:#999}
+ul li.page_item a { text-decoration:none}
+ul.sub-menu li.page_item a { color:#999}
+.login { font-size:11px; color:white !important ; font-weight:bold}
+.menu-item { padding:6px 0 0 0}
+#footerSlideContent p { color:#999}
+#footerSlideContent p span {font-weight:bold;  color:#fff}
+#footerSlideContent ul li ul li {color:#999}
+#footerSlideContent ul li span {color:#fff; font-weight:bold;}
+address { color:#999; font-weight: bold; line-height:20px; padding-bottom: 2px;}
+address br  {/*margin-bottom:6px;*/}
+#numbers li {margin-bottom:6px;}
+#digital {padding-bottom:0px;}
+#digital li {padding-bottom:6px;}
+li span.letter-spacing {color:#999 !important;}

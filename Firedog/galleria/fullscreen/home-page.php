@@ -1,0 +1,258 @@
+<?php
+/**
+ * Template Name: Homepage Template
+ *
+ * A custom page template without sidebar.
+ *
+ * The "Template Name:" bit above allows this to be selectable
+ * from a dropdown menu on the edit page screen.
+ *
+ * @package WordPress
+ * @subpackage Starkers
+ * @since Starkers 3.0
+ */
+
+get_header(); ?>
+
+<script src="<?php bloginfo('template_url');?>/galleria/galleria-1.2.3.min.js"></script>
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+
+				
+	<!----------------------------------------------------
+	Content
+	-----------------------------------------------------> 
+	<div id="wrapper_homepage"> 
+	
+		<div id="left">
+			<div class="first_section column-row-sec four trans right_rounded padding_full" style="z-index:9999;position:relative;">
+			
+				<?php
+				if ( function_exists( 'the_content_part' ) && has_content_parts() ) {
+					the_content_part( 1, '<header class="first_col column four"> ', '</header> ' );
+					the_content_part( 2, '<div class="first_col column three">', '</div>' );
+					the_content_parts( array(
+						'before' => '<div class="row two">',
+						'after' => '</div>',
+						'start' => 3
+					) );
+				} else {
+					the_content();
+				}
+				?>
+				<div class="clear"></div>
+			</div>
+			
+			
+			
+			<div class="second_section first_col column-row-sec four trans left right_rounded padding_full" style="z-index:9999;position:relative;"> 
+				<div class="first_row row two_b border">
+					<?php
+					//Latest blog post
+					$args = array(
+						'post_type' => 'post',
+						'showposts' => 1,
+						'posts_per_page' => 1,
+						'offset' => 0,
+					);
+					$query = new WP_Query($args);
+					//query_posts('post_type=case_studies&theme='.$theme.'&showposts=3&offset=0&orderby=rand'); 
+					if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); 
+
+					//the_permalink();
+					/***
+					<h4 class="module_head">Recent fireblog thinking</h4> 
+					<h6 class="module_intro">Kuler than cool!</h6> 
+					<p class="small">March 4th, 2011 by Lee Scott</p> 
+					<p class="small">I recently stumbled acress this fantastic time-saving product for designers called Adobe Kuler...</p> 
+					<h6 class="module_intro"><img src="<?php bloginfo('template_url');?>/images/arrow.png" height="15px" /><a href="#">View the firedog blog</a></h6> 
+					***/
+					?>
+					<h4 class="module_head">Recent fireblog thinking</h4>
+                    
+					<h6 class="module_intro"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title();?></a></h6> 
+					<p class="small"><?php the_date('F jS, Y') ?> by <?php the_author();?></p> 
+					<p class="small"><?php echo custom_get_the_excerpt( get_the_content() );?></p>
+					<?php endwhile; endif; wp_reset_query();?>
+					<h6 class="module_intro"><img src="<?php bloginfo('template_url');?>/images/arrow.png" height="15px" /><a href="<?php echo get_category_link( 122 );?>">View the firedog blog</a></h6> 
+				</div> 
+				<div class="last_row row two_b padding_L"> 
+					<h4 class="module_head">Firedogs tweet'n feed</h3>
+					
+					<?php
+					$ch = curl_init();
+					//curl_setopt($ch, CURLOPT_URL, "http://twitter.com/statuses/user_timeline/firedogdesign.rss");
+					curl_setopt($ch, CURLOPT_URL, "http://twitter.com/statuses/user_timeline/firedogdesign.xml?count=1");
+					curl_setopt($ch, CURLOPT_HEADER, 0);
+					curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+					$twitter = curl_exec($ch);
+					$xml = new SimpleXMLElement($twitter);
+					//print_r($xml);
+					
+					$twitter_date = $xml->status->created_at;
+					$twitter_text = $xml->status->text;
+					$twitter_source = strip_tags($xml->status->source);
+					
+					curl_close($ch);	
+					?>
+					<p class="small"><?php echo $twitter_text; ?></p> 
+					<p class="small"><?php echo date('H:m A M jS', strtotime($twitter_date));?> via <?php echo $twitter_source; ?></p> 
+					<h6 class="module_intro"><img src="<?php bloginfo('template_url');?>/images/arrow.png" height="15px" /><a href="http://twitter.com/firedogdesign" target="_blank">Follow the firedog</a></h6>     
+				</div> 
+			</div>
+			<div class="clear"></div>
+		</div>
+
+
+
+			
+			<aside class="right">
+			
+				<div id="galleria">
+				<?php
+				$args = array(
+					'post_type'	=> 'case_studies',
+					'posts_per_page' => -1,
+					'offset'	=> 0,
+					'orderby'	=> 'rand',
+					//'meta'		=> 'level_1'
+					'meta_key' => 'extra_parameter_show_on_homepage',
+					'meta_value' => 'true'
+				);
+				$query = new WP_Query($args);
+				//query_posts('post_type=case_studies&theme='.$theme.'&showposts=3&offset=0&orderby=rand');
+				if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+					
+					//Client
+					$clients = get_the_terms($post->id, 'clients');
+					if ( !empty( $clients ) ) :
+						foreach ($clients as $client) {
+							$client = $client->slug;
+							break;
+						}
+					endif;
+				
+					if ( class_exists('MultiPostThumbnails') ) : 
+						
+						$home_page_featured_image_array = '';
+						$home_page_featured_image = get_post_meta( $post->ID, 'home_page_featured_image', true );
+						$fullscreen_order_value = get_post_meta( $post->ID, 'fullscreen_order_value', true );
+								
+						if($home_page_featured_image != '')
+							$home_page_featured_image_array = array($home_page_featured_image);
+						elseif($fullscreen_order_value != '')
+							$home_page_featured_image_array = explode(',',$fullscreen_order_value);
+						else
+							$home_page_featured_image_array = array(1,2,3,4,5,6,7,8,9,10);
+						
+						
+						$valid_img = '';
+						foreach($home_page_featured_image_array as $img){	
+							if ( MultiPostThumbnails::has_post_thumbnail('case_studies', 'fullscreen-image-'.$img) ){
+								$valid_img = $img;
+								break;
+							}
+						}
+						
+						$img = MultiPostThumbnails::get_post_thumbnail_id('case_studies', 'fullscreen-image-'.$img, $post->ID);
+						if($img){
+							$img_attachment = get_post( $img );
+							if ($img_attachment) {
+							
+								$tags_list = '<span id="cs_tags">Discipline: '.get_the_term_list( $post->ID, 'discipline', '',', ', '');
+								$tags_list .= ' / Sector: '.get_the_term_list( $post->ID, 'sector', '',', ', '');                        
+								$tags_list .= ' / Themes: '.get_the_term_list( $post->ID, 'theme', '',', ', '').'</span>';
+							
+							
+								echo "<img src='".$img_attachment->guid."' alt='<p id=\"cs_p\">".get_the_excerpt()."</p>".$tags_list."' title='<a href=\"".get_permalink()."\">".$client."</a>' >";
+							}
+						}
+
+					endif;
+				
+				endwhile; endif; wp_reset_query();
+				?>
+				</div>
+			
+			
+			
+			
+			
+				<?php /***
+				<div class="row_a two trans top_left_rounded padding_LR"> 
+					<div> 
+						<div id="case_nav" class="left"> 
+							<img class="right"src="<?php bloginfo('template_url');?>/images/arrow_white_right.png"><img class="right"src="<?php bloginfo('template_url');?>/images/arrow_white_left.png"style="margin-right:20px"> 
+							<h4 class="module_head">Firedog case study</h4> 
+							<h5 class="module_head">Client Name</h5> 
+						</div> 
+					</div> 
+				</div> 
+				<div class="clear"></div> 
+				<div class="row_a two trans_dark bot_left_rounded padding_LR"> 
+					<p class="case_desc">Dynamic integrated campaign for reaching out to students with outdoor, ambient and digital media</p> 
+					<p class="case_desc_last">Tags: <a href="#">Campaign</a>, <a href="#">Education</a></p> 
+				</div> 
+				***/ ?>
+			</aside> 
+		<div class="clear"></div>
+		
+		<div class="galleria-image-navtop">
+			<div class="galleria-image-nav-right"></div>
+			<div class="galleria-image-nav-left"></div>
+		</div>
+		
+	</div><!--end wrapper-->
+
+<script>
+
+
+
+	var interval;
+	Galleria.loadTheme('<?php bloginfo('template_url');?>/galleria/fullscreen/galleria.fullscreen.min.home.js');	
+	interval = setInterval('loadMyGalleria()',1500);
+
+	function loadMyGalleria() {
+		if ( jQuery('#galleria > div').size() == 0) { 
+			jQuery("#galleria").galleria({
+				extend: function(options) {
+					var gallery = this; // "this" is the gallery instance
+					jQuery('.galleria-image-navtop .galleria-image-nav-right').click(function() {
+						gallery.next(); // call the play method
+					});
+					jQuery('.galleria-image-navtop .galleria-image-nav-left').click(function() {
+						gallery.prev(); // call the play method
+					});
+				}
+			}); 
+			clearInterval(interval); 
+		}
+	}
+	
+	function case_studies_infobar(){
+		jQuery('.galleria-info-text').prepend('<h4 class="module_head">Firedog case study</h4>');
+	}
+	function centerWrapper_homepage() {
+		var winH = jQuery(window).height(); 
+		var wrapper_homepage = jQuery('#left'); 
+		var top_int = winH/2-wrapper_homepage.height()/2;
+		if(top_int <= 100) {top_int=100;}
+		wrapper_homepage.css('top', top_int);
+		
+		var first_section = jQuery('.first_section').outerHeight();
+		var second_section = jQuery('.second_section').outerHeight();
+		var right_section = jQuery('.galleria-info').outerHeight();
+		
+		var bottom_point = top_int*1 + first_section + second_section + 18;
+		
+		jQuery('.galleria-info').css('bottom',winH*1 - bottom_point);
+		jQuery('.galleria-image-navtop').css('top', bottom_point*1 - right_section );
+	}
+
+	
+	jQuery(window).resize(function() {
+		centerWrapper_homepage();
+	});
+</script>	
+
+<?php endwhile; ?>
+<?php get_footer(); ?>

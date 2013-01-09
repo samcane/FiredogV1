@@ -1,0 +1,55 @@
+
+/* FONT FACE */
+/* ----------------------------------------- */
+
+@font-face {
+    font-family: 'BebasRegular';
+    src: url(../fonts/glypbo06-webfont);
+    src: url(../fonts/BEBAS___-webfont.eot?iefix) format('eot'),
+         url(../fonts/BEBAS___-webfont.woff) format('woff'),
+         url(../fonts/BEBAS___-webfont.ttf) format('truetype'),
+         url(../fonts/BEBAS___-webfont.svg#webfontSRj8j0PE) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GlyphaBold';
+    src: url(../fonts/glyphb35-webfont.eot);
+    src: url(../fonts/glyphb35-webfont.eot?#iefix) format('eot'),
+         url(../fonts/glyphb35-webfont.woff) format('woff'),
+         url(../fonts/glyphb35-webfont.ttf) format('truetype'),
+         url(../fonts/glyphb35-webfont.svg#webfontjUc23aLV) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GlyphaMedium';
+    src: url(../fonts/glypha-webfont.eot);
+    src: url(../fonts/glypha-webfont.eot?#iefix) format('eot'),
+         url(../fonts/glypha-webfont.woff) format('woff'),
+         url(../fonts/glypha-webfont.ttf) format('truetype'),
+         url(../fonts/glypha-webfont.svg#webfontK7zTlt0o) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GlyphaBlack';
+    src: url(../fonts/glyphb65-webfont.eot);
+    src: url(../fonts/glyphb65-webfont.eot?#iefix) format('eot'),
+         url(../fonts/glyphb65-webfont.woff) format('woff'),
+         url(../fonts/glyphb65-webfont.ttf) format('truetype'),
+         url(../fonts/glyphb65-webfont.svg#webfontBriHuNcQ) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GlyphaThin';
+    src: url(../fonts/glypht61-webfont.eot);
+    src: url(../fonts/glypht61-webfont.eot?#iefix) format('eot'),
+         url(../fonts/glypht61-webfont.woff) format('woff'),
+         url(../fonts/glypht61-webfont.ttf) format('truetype'),
+         url(../fonts/glypht61-webfont.svg#webfontuikcjD6W) format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
